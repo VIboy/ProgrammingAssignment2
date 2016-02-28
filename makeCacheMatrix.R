@@ -12,15 +12,6 @@ makeCacheMatrix <- function(x = matrix()) {
        getmatrix = getmatrix)
 }
 
-# Test
-x <- matrix(1:4,2,2)
-b<-makeCacheMatrix(x)
-cacheSolve(b)
-x * cacheSolve(b)
-cacheSolve(b)
-x
-# End Test     
-
 cacheSolve <- function(x, ...) {
   m <- x$getmatrix()
   if(!is.null(m)) {
